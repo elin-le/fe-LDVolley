@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-num: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --color-navy-950: #070f24;
+  --color-navy-900: #0b1b3a;
+  --color-navy-800: #12295a;
+  --color-wine-700: #6d1a36;
+  --color-wine-600: #8a2347;
+  --color-wine-300: #d9a3b5;
+  --color-chalk: #f7f5f2;
+  --color-paper: #faf6ef;
+  --color-sand: #efe6d8;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-paper text-navy-900 font-display antialiased; }
+  :focus-visible { @apply outline-2 outline-offset-2 outline-wine-600; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { animation: none !important; transition: none !important; }
+  }
+}
+
+@layer utilities {
+  .clip-slash { clip-path: polygon(14% 0, 100% 0, 100% 100%, 0 100%); }
+  .clip-slash-r { clip-path: polygon(0 0, 100% 0, 86% 100%, 0 100%); }
+  .text-outline { -webkit-text-stroke: 1.5px var(--color-wine-300); color: transparent; }
+}
+
+@keyframes ball-in {
+  from { transform: translate(60px, -80px) rotate(-120deg); opacity: 0; }
+  to { transform: none; opacity: 1; }
+}
+@utility animate-ball-in { animation: ball-in 1s cubic-bezier(.2,.8,.2,1) both; }
+
+@keyframes float { 0%, 100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-14px) rotate(8deg); } }
+@keyframes spin-slow { to { transform: rotate(360deg); } }
+@keyframes marquee { to { transform: translateX(-50%); } }
+@keyframes rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+@keyframes pop { 40% { transform: scale(1.5); } }
+@utility animate-float { animation: float 6s ease-in-out infinite; }
+@utility animate-spin-slow { animation: spin-slow 40s linear infinite; }
+@utility animate-marquee { animation: marquee 28s linear infinite; }
+@utility animate-rise { animation: rise .8s cubic-bezier(.2,.8,.2,1) both; }
+@utility animate-pop { animation: pop .35s ease; }
+
+
+/* Auth: form completion + success motion */
+@keyframes draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+@keyframes check-in { from { transform: scale(.3); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes blob { 0%, 100% { transform: translate(0, 0) scale(1); } 50% { transform: translate(34px, -26px) scale(1.12); } }
+@keyframes shimmer { to { transform: translateX(100%); } }
+@utility animate-draw { stroke-dasharray: 1; animation: draw .5s .1s ease-out both; }
+@utility animate-check-in { animation: check-in .4s cubic-bezier(.34, 1.56, .64, 1) both; }
+@utility animate-blob { animation: blob 14s ease-in-out infinite; }
+@utility animate-shimmer { animation: shimmer 2.2s ease-in-out infinite; }

@@ -1,0 +1,48 @@
+export const extra = {
+  vi: {
+    auth: {
+      signIn: 'Đăng nhập', signOut: 'Đăng xuất', register: 'Đăng ký', hi: 'Xin chào', admin: 'Quản trị',
+      loginTitle: 'Chào mừng trở lại', loginSub: 'Đăng nhập để xem giá sỉ và theo dõi đơn hàng.',
+      registerTitle: 'Tạo tài khoản', registerSub: 'Đăng ký miễn phí. Tài khoản mua sỉ cần được LDVolley duyệt.',
+      name: 'Tên', phone: 'Số điện thoại', email: 'Email', password: 'Mật khẩu', confirm: 'Nhập lại mật khẩu',
+      submitLogin: 'Đăng nhập', submitRegister: 'Tạo tài khoản', noAccount: 'Chưa có tài khoản?', haveAccount: 'Đã có tài khoản?',
+      sideTitle: 'Mua lẻ dễ dàng, mua sỉ giá tốt', sideBody: 'Tài khoản được duyệt sẽ thấy giá sỉ ngay trên từng sản phẩm.',
+      doneTitle: 'Đăng ký thành công', doneBody: 'Tài khoản đang chờ duyệt. Khi LDVolley kích hoạt, bạn sẽ thấy giá sỉ trên mọi sản phẩm.', doneCta: 'Tiếp tục mua sắm',
+      progress: 'Hoàn thành hồ sơ', ready: 'Sẵn sàng tạo tài khoản', showPw: 'Hiện mật khẩu', hidePw: 'Ẩn mật khẩu',
+      ph: { name: 'Nguyễn Văn A', phone: '0901 234 567', email: 'ban@email.com', password: 'Tối thiểu 6 ký tự', confirm: 'Nhập lại mật khẩu', loginPassword: 'Mật khẩu của bạn' },
+      social: { google: 'Tiếp tục với Google', facebook: 'Tiếp tục với Facebook', or: 'hoặc dùng email' },
+      errors: { invalid: 'Email hoặc mật khẩu không đúng.', blocked: 'Tài khoản đã bị khóa. Vui lòng liên hệ cửa hàng.', emailTaken: 'Email này đã được đăng ký.', mismatch: 'Mật khẩu nhập lại không khớp.', required: 'Vui lòng nhập thông tin này.', nameInvalid: 'Tên cần ít nhất 2 ký tự.', phoneInvalid: 'Số điện thoại chưa đúng, ví dụ 0901234567.', emailInvalid: 'Email chưa đúng định dạng.', passwordInvalid: 'Mật khẩu cần ít nhất 6 ký tự.' },
+    },
+    ws: { badge: 'Giá sỉ', min: 'Giá sỉ áp dụng khi mua từ {n} sản phẩm.', guest: 'Đăng ký tài khoản để xin giá sỉ.', pending: 'Tài khoản đang chờ duyệt để xem giá sỉ.', total: 'Tạm tính' },
+    buy: { add: 'Thêm vào giỏ', added: 'Đã thêm vào giỏ', now: 'Mua ngay', contact: 'Liên hệ ngay' },
+    cart: { title: 'Giỏ hàng', empty: 'Giỏ hàng đang trống', shop: 'Đi mua sắm', total: 'Tổng cộng', remove: 'Xóa', checkout: 'Liên hệ chốt đơn', note: 'Giá sỉ tự áp dụng khi đủ số lượng tối thiểu.' },
+    admin: {
+      title: 'Quản trị', users: 'Người dùng', products: 'Sản phẩm', search: 'Tìm theo tên, email, số điện thoại', pending: 'chờ duyệt',
+      status: { active: 'Đã duyệt', pending: 'Chờ duyệt', blocked: 'Đã khóa' },
+      retail: 'Giá lẻ', wholesale: 'Giá sỉ', minQty: 'Số lượng sỉ tối thiểu', images: 'Link ảnh (tối đa 3)', save: 'Lưu', saved: 'Đã lưu', none: 'Không có kết quả',
+    },
+  },
+  en: {
+    auth: {
+      signIn: 'Sign in', signOut: 'Sign out', register: 'Register', hi: 'Hi', admin: 'Admin',
+      loginTitle: 'Welcome back', loginSub: 'Sign in to see wholesale prices and track orders.',
+      registerTitle: 'Create an account', registerSub: 'Free to join. Wholesale accounts are approved by LDVolley.',
+      name: 'Name', phone: 'Phone number', email: 'Email', password: 'Password', confirm: 'Confirm password',
+      submitLogin: 'Sign in', submitRegister: 'Create account', noAccount: 'No account yet?', haveAccount: 'Already have an account?',
+      sideTitle: 'Easy retail, better wholesale', sideBody: 'Approved accounts see wholesale prices on every product.',
+      doneTitle: 'You are registered', doneBody: 'Your account is pending approval. Once LDVolley activates it, wholesale prices appear on every product.', doneCta: 'Keep shopping',
+      progress: 'Profile completion', ready: 'Ready to create your account', showPw: 'Show password', hidePw: 'Hide password',
+      ph: { name: 'John Smith', phone: '0901 234 567', email: 'you@email.com', password: 'At least 6 characters', confirm: 'Re-enter password', loginPassword: 'Your password' },
+      social: { google: 'Continue with Google', facebook: 'Continue with Facebook', or: 'or use email' },
+      errors: { invalid: 'Wrong email or password.', blocked: 'This account is blocked. Please contact the store.', emailTaken: 'This email is already registered.', mismatch: 'Passwords do not match.', required: 'Please fill in this field.', nameInvalid: 'Name needs at least 2 characters.', phoneInvalid: 'Phone number looks wrong, e.g. 0901234567.', emailInvalid: 'Email format looks wrong.', passwordInvalid: 'Password needs at least 6 characters.' },
+    },
+    ws: { badge: 'Wholesale', min: 'Wholesale price applies from {n} items.', guest: 'Register an account to request wholesale prices.', pending: 'Your account is pending approval for wholesale prices.', total: 'Subtotal' },
+    buy: { add: 'Add to cart', added: 'Added to cart', now: 'Buy now', contact: 'Contact now' },
+    cart: { title: 'Cart', empty: 'Your cart is empty', shop: 'Start shopping', total: 'Total', remove: 'Remove', checkout: 'Contact to order', note: 'Wholesale prices apply automatically at the minimum quantity.' },
+    admin: {
+      title: 'Admin', users: 'Users', products: 'Products', search: 'Search by name, email or phone', pending: 'pending',
+      status: { active: 'Approved', pending: 'Pending', blocked: 'Blocked' },
+      retail: 'Retail price', wholesale: 'Wholesale price', minQty: 'Minimum wholesale quantity', images: 'Image links (max 3)', save: 'Save', saved: 'Saved', none: 'No results',
+    },
+  },
+}
