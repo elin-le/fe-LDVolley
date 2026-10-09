@@ -14,9 +14,10 @@ const cartSlice = createSlice({
       if (qty < 1) delete state.items[id]
       else state.items[id] = qty
     },
+    clearCart(state) { state.items = {} },
   },
 })
 
-export const { addToCart, removeFromCart, setQty } = cartSlice.actions
+export const { addToCart, removeFromCart, setQty, clearCart } = cartSlice.actions
 export const selectCartCount = (s) => Object.values(s.cart.items).reduce((a, b) => a + b, 0)
 export default cartSlice.reducer

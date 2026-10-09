@@ -29,7 +29,7 @@ function Detail({ product, all }) {
 
   const add = () => dispatch(addToCart({ id: product.id, qty }))
   const handleAdd = () => { add(); setAdded(true); setTimeout(() => setAdded(false), 1600) }
-  const handleBuyNow = () => { add(); navigate('/cart') }
+  const handleBuyNow = () => navigate(`/checkout?buy=${product.id}&qty=${qty}`)
 
   let wsNote = <Link to="/register" className="text-wine-700 underline underline-offset-4">{t.ws.guest}</Link>
   if (wholesale) wsNote = t.ws.min.replace('{n}', product.minQty)

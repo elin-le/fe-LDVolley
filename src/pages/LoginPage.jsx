@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { Link, useNavigate } from 'react-router'
+import { Link, useLocation, useNavigate } from 'react-router'
 import { useT } from '../hooks/useT'
 import { login, socialLogin } from '../store/authSlice'
 import AuthLayout, { Field, Icon, submitClass } from '../components/AuthLayout'
@@ -10,10 +10,11 @@ export default function LoginPage() {
   const { t } = useT()
   const dispatch = useDispatch()
   const navigate = useNavigate()
+  const from = useLocation().state?.from
   const [error, setError] = useState('')
   const [busy, setBusy] = useState(false)
 
-  const finish = (user) => navigate(user.role === 'admin' ? '/admin' : '/')
+  const finish = (user) => navigate(from ?? (user.role === 'admin' ? '/admin' : '/'))
   const fail = (code) => { setError(t.auth.errors[code] ?? t.auth.errors.invalid); setBusy(false) }
 
   const onSubmit = async (e) => {

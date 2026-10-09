@@ -59,7 +59,10 @@ export default function CartPage() {
         <p className="max-w-xs text-sm text-navy-900/70">{t.cart.note}</p>
         <p className="font-num text-2xl">{t.cart.total}: <span className="text-3xl text-wine-700">{vnd.format(total)}</span></p>
       </div>
-      <a href={siteConfig.contactUrl} target="_blank" rel="noopener noreferrer" className="mt-6 inline-block rounded-full bg-wine-700 px-8 py-3 font-semibold text-chalk transition hover:bg-navy-900 active:scale-95">{t.cart.checkout}</a>
+      <div className="mt-6 flex flex-wrap items-center gap-4">
+        <Link to="/checkout" className="rounded-full bg-wine-700 px-8 py-3 font-semibold text-chalk transition hover:bg-navy-900 active:scale-95">{t.cart.checkout}</Link>
+        <a href={siteConfig.contactUrl} target="_blank" rel="noopener noreferrer" className="text-navy-900/70 underline underline-offset-4 hover:text-wine-700">{t.cart.contact}</a>
+      </div>
     </section>
   )
 }
