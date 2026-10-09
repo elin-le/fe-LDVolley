@@ -1,4 +1,5 @@
 import { extra } from './extra'
+import { orders } from './orders'
 export const translations = {
   vi: {
     nav: { home: 'Trang chủ', products: 'Sản phẩm', shop: 'Cửa hàng', categories: 'Danh mục', team: 'Đồng phục đội', contact: 'Liên hệ', signIn: 'Đăng nhập', cart: 'Giỏ hàng', menu: 'Mở menu' },
@@ -80,4 +81,4 @@ export const translations = {
   },
 }
 
-for (const l of ['vi', 'en']) Object.assign(translations[l], extra[l])
+for (const l of ['vi', 'en']) Object.assign(translations[l], extra[l], orders[l])

@@ -15,7 +15,7 @@ export const extra = {
     },
     ws: { badge: 'Giá sỉ', min: 'Giá sỉ áp dụng khi mua từ {n} sản phẩm.', guest: 'Đăng ký tài khoản để xin giá sỉ.', pending: 'Tài khoản đang chờ duyệt để xem giá sỉ.', total: 'Tạm tính' },
     buy: { add: 'Thêm vào giỏ', added: 'Đã thêm vào giỏ', now: 'Mua ngay', contact: 'Liên hệ ngay' },
-    cart: { title: 'Giỏ hàng', empty: 'Giỏ hàng đang trống', shop: 'Đi mua sắm', total: 'Tổng cộng', remove: 'Xóa', checkout: 'Liên hệ chốt đơn', note: 'Giá sỉ tự áp dụng khi đủ số lượng tối thiểu.' },
+    cart: { title: 'Giỏ hàng', empty: 'Giỏ hàng đang trống', shop: 'Đi mua sắm', total: 'Tổng cộng', remove: 'Xóa', checkout: 'Đặt hàng', contact: 'Hoặc liên hệ cửa hàng', note: 'Giá sỉ tự áp dụng khi đủ số lượng tối thiểu.' },
     admin: {
       title: 'Quản trị', users: 'Người dùng', products: 'Sản phẩm', search: 'Tìm theo tên, email, số điện thoại', pending: 'chờ duyệt',
       status: { active: 'Đã duyệt', pending: 'Chờ duyệt', blocked: 'Đã khóa' },
@@ -38,7 +38,7 @@ export const extra = {
     },
     ws: { badge: 'Wholesale', min: 'Wholesale price applies from {n} items.', guest: 'Register an account to request wholesale prices.', pending: 'Your account is pending approval for wholesale prices.', total: 'Subtotal' },
     buy: { add: 'Add to cart', added: 'Added to cart', now: 'Buy now', contact: 'Contact now' },
-    cart: { title: 'Cart', empty: 'Your cart is empty', shop: 'Start shopping', total: 'Total', remove: 'Remove', checkout: 'Contact to order', note: 'Wholesale prices apply automatically at the minimum quantity.' },
+    cart: { title: 'Cart', empty: 'Your cart is empty', shop: 'Start shopping', total: 'Total', remove: 'Remove', checkout: 'Checkout', contact: 'Or contact the store', note: 'Wholesale prices apply automatically at the minimum quantity.' },
     admin: {
       title: 'Admin', users: 'Users', products: 'Products', search: 'Search by name, email or phone', pending: 'pending',
       status: { active: 'Approved', pending: 'Pending', blocked: 'Blocked' },

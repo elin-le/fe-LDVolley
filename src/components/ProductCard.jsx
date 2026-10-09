@@ -27,9 +27,10 @@ export default function ProductCard({ product, className = '' }) {
         {product.best && <span className="absolute left-4 top-4 rounded-full bg-paper px-3 py-1 text-sm font-semibold text-wine-700">{t.products.badge}</span>}
       </Link>
       <h3 className="mt-4 text-xl font-semibold"><Link to={`/products/${product.id}`} className="hover:text-wine-700">{name}</Link></h3>
-      <div className="mt-1 flex flex-wrap items-center justify-between gap-3">
-        <PriceTag product={product} />
-        <button type="button" onClick={handleAdd} className="rounded-full bg-navy-900 px-4 py-1.5 text-sm font-semibold text-chalk transition hover:bg-wine-700 active:scale-95">
+      <div className="mt-1"><PriceTag product={product} /></div>
+      <div className="mt-3 grid grid-cols-2 gap-2">
+        <Link to={`/checkout?buy=${product.id}&qty=1`} className="rounded-full bg-wine-700 px-3 py-2 text-center text-sm font-semibold text-chalk transition hover:bg-navy-900 active:scale-95">{t.buy.now}</Link>
+        <button type="button" onClick={handleAdd} className="rounded-full px-3 py-2 text-sm font-semibold ring-1 ring-navy-900/30 transition hover:bg-navy-900 hover:text-chalk active:scale-95">
           {added ? t.products.added : t.products.add}
         </button>
       </div>

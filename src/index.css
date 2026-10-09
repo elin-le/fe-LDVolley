@@ -57,3 +57,9 @@
 @utility animate-check-in { animation: check-in .4s cubic-bezier(.34, 1.56, .64, 1) both; }
 @utility animate-blob { animation: blob 14s ease-in-out infinite; }
 @utility animate-shimmer { animation: shimmer 2.2s ease-in-out infinite; }
+
+/* Charts */
+@keyframes grow-y { from { transform: scaleY(0); } }
+@keyframes fade-in { from { opacity: 0; } }
+@utility animate-grow-y { transform-box: fill-box; transform-origin: bottom; animation: grow-y .7s cubic-bezier(.2, .8, .2, 1) both; }
+@utility animate-fade { animation: fade-in .8s .3s ease-out both; }
